@@ -1,0 +1,53 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        UserName:<input type="text" id="name"><br><br>
+        Password:<input type="password": id="pass">&nbsp<button onclick="show()" id="show">Show</button><br><br>
+        <button onclick="submit()">Submit</button>&nbsp;
+            <button onclick="reset()">Reset</button>
+            <button onclick="green()">green</button>
+            <button onclick="red()">red</button>
+            <h2 id="result"></h2>
+            <h2 id="passw"></h2>
+    </body>
+</html>
+
+
+
+
+<script>
+function submit(){
+    let a=document.getElementById("name").value
+    document.getElementById("result").innerHTML = "UserName: " +a;
+    let b=document.getElementById("pass").value
+    document.getElementById("passw").innerHTML = "Password: " +b
+}
+function reset(){
+    document.getElementById("name").value = ""
+    document.getElementById("result").innerHTML = ""
+    document.getElementById("pass").value =""
+    document.getElementById("passw").innerHTML = ""
+}
+function show(){
+    let c=document.getElementById("pass")
+    if(c.type==="password"){
+        c.type="Text"
+        document.getElementById("show").innerHTML="Hide"
+    }else{
+        c.type="password";
+        document.getElementById("show").innerHTML="Show"
+    }
+}
+
+function green(){
+    document.getElementById("result").style.color="green"
+    document.getElementById("passw").style.color="red"
+}
+
+function red(){
+    document.getElementById("result").style.color="red"
+    document.getElementById("passw").style.color="green"
+}
+</script>
