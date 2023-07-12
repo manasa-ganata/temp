@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale = 1.0">
+        <!-- <title> Login Page </title> -->
+        
+        <h1 style="text-align: center;" title="login page">Login page</h1>
+        <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="center">
+            <h1 class="from box" id="title">Sign up</h1>
+            <div class="inputfield">
+                <i class="fa-solid fa-user"></i>
+                Name:<input type="text" id="name" ><br><br>
+                <i class="fa-solid fa-envelope"></i>
+                Email:<input type="email" id="email"><br><br>
+                <i class="fa-solid fa-lock"></i>
+                Password:<input type="password" id="pass">&nbsp<button onclick="show()" id="show">Show</button><br><br>
+            </div>
+            <p>Lost password:<a href="#">Click Here</a></p>
+            <div class="button1">
+                <button id="signupbtn" onclick="submit()" type="button">submit</button>&nbsp;
+                <button  id="signupbtn" type="button" onclick="reset()" class="disable">Reset</button>
+            <button onclick="green()">green</button>
+            <button onclick="red()">red</button>
+
+            </div>
+        
+            <h2 id="result"></h2>
+            <h2 id="passw"></h2>
+            <h2 id="ema"></h2>
+        </div>
+  
+
+
+
+<script>
+function submit(){
+    let a=document.getElementById("name").value
+    document.getElementById("result").innerHTML = "UserName: " +a;
+    let b=document.getElementById("pass").value
+    document.getElementById("passw").innerHTML = "Password: " +b
+    let c=document.getElementById("email").value
+    document.getElementById("ema").innerHTML = "Password: " +c
+}
+function reset(){
+    document.getElementById("name").value = ""
+    document.getElementById("result").innerHTML = ""
+    document.getElementById("pass").value =""
+    document.getElementById("passw").innerHTML = ""
+    document.getElementById("email").value =""
+    document.getElementById("ema").innerHTML = ""
+}
+
+// let signupbtn = document.getElementById("signupbtn")
+// let signinbtn =document.getElementById("signinbtn")
+// let name = document.getElementById("name")
+// let tittle=document.getElementById("title")
+
+// signinbtn.onclick=function(){
+//     name.style.maxHeight="0";
+//     tittle.innerHTML ="Sign In";
+//     signupbtn.classList.add("disable");
+//     signinbtn.classList.remove("disable");
+    
+// }
+// signupbtn.onclick=function(){
+//     name.style.maxHeight="60px";
+//     tittle.innerHTML ="Sign UP";
+//     signupbtn.classList.remove("disable");
+//     signinbtn.classList.add("disable");
+    
+// }
+
+
+function show(){
+    let c=document.getElementById("pass")
+    if(c.type==="password"){
+        c.type="Text"
+        document.getElementById("show").innerHTML="Hide"
+    }else{
+        c.type="password";
+        document.getElementById("show").innerHTML="Show"
+    }
+}
+
+function green(){
+    let d=document.getElementById("result")
+    if(d.style.color=="green"){
+        d.style.color="black"
+        document.getElementById("result").style.color="black"
+    }else{
+        d.style.color="green";
+        document.getElementById("passw").style.color="red"
+        
+    }
+    
+}
+
+function red(){
+    let d=document.getElementById("passw")
+    if(d.style.color=="red"){
+        d.style.color="black"
+        document.getElementById("pass").style.color="red"
+    }else{
+        d.style.color="red";
+        document.getElementById("result").style.color="green"
+        
+    }
+}
+</script>
+</body>
+</html>
