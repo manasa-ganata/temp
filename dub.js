@@ -32,3 +32,12 @@ const sampleArray = ['a', 'a', 'b', 'c'];
 sampleArray.forEach(function (x) 
 { counts[x] = (counts[x] || 0) + 1; });
 console.log(counts)
+
+
+
+const result=sampleArray.reduce((intial,current)=>{
+intial[current]=(intial[current] || 0 )+1
+console.log(intial[current])
+return intial;
+},{})
+console.log(result)

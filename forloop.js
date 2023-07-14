@@ -1,8 +1,8 @@
-var num = [3,4,5,6]
-for(i=0;i<num.length;i++){
-    console.log(num);
-    //console.log(num[i]);
-}
+// var num = [3,4,5,6]
+// for(i=0;i<num.length;i++){
+//     console.log(num);
+//     //console.log(num[i]);
+// }
 
 
 
@@ -20,6 +20,6 @@ for(let f of off){
 
 //reverse
 
-const name1='hello manasa';
-const rev=name1.split('').reverse().join('')
-console.log(rev);
+// const name1='hello manasa';
+// const rev=name1.split('').reverse().join('')
+// console.log(rev);
